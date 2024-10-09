@@ -1,5 +1,7 @@
 import Navbar from "./Navbar"
 import callme from "../assets/images/call me.png"
+import { useEffect, useRef } from "react";
+import gsap from "gsap"
 
 const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDarkMode: () => void }) => {
 
@@ -30,17 +32,53 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
 
     ]
 
+
+    const curtainRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        if (curtainRef.current) {
+            gsap.to(curtainRef.current, {
+                y: '100%',
+                duration: 2,
+                ease: 'power4.inOut',
+                onComplete: () => {
+                    curtainRef.current!.style.display = 'none';
+                },
+            });
+        }
+        gsap.fromTo(
+            ".popup",
+            { opacity: 0, scale: 0.5 },
+            { opacity: 1, scale: 1, duration: 1, delay: 1, ease: 'power1.out' }
+        );
+    }, []);
+
+
     return (
         <div className={`${isDarkMode ? "bg-[#0f0f0f] text-white" : " bg-[#f7f9fc] text-black"} h-auto w-full overflow-hidden pb-12 flex flex-col items-center justify-start px-4`}>
+
+            {/* Animation Div  */}
+            <div
+                ref={curtainRef}
+                style={{
+                    position: 'fixed',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    backgroundColor: '#131313',
+                    zIndex: 1000,
+                }}
+            ></div>
 
             <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
             <div className="flex items-start justify-between gap-12 xl:w-[75rem] w-[90%] h-full pt-12 ">
                 <div className="flex flex-col items-start gap-9">
-                    <h1 className="uppercase text-[1rem] font-semibold">contact info</h1>
+                    <h1 className="uppercase text-[1rem] font-semibold popup">contact info</h1>
                     {contactInfo.map((item, idx) => {
                         return (
-                            <div key={idx} className="flex items-center justify-start gap-4">
+                            <div key={idx} className="flex items-center justify-start gap-4 popup">
                                 <div className={`p-7 ${isDarkMode ? "bg-zinc-900" : "bg-white shadow-lg"} rounded-xl cursor-pointer`}>
                                     {item.svg}
                                 </div>
@@ -52,8 +90,8 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
                         )
                     })}
 
-                    <h1 className="uppercase text-[1rem] font-semibold pt-6">social info</h1>
-                    <div className="flex items-center gap-6">
+                    <h1 className="uppercase text-[1rem] font-semibold pt-6 popup">social info</h1>
+                    <div className="flex items-center gap-6 popup">
                         <div className={`${isDarkMode ? "bg-zinc-800" : " bg-white shadow-lg"} cursor-pointer rounded-full xl:p-5 p-3 social-div`}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={`${isDarkMode ? "text-white" : "text-blue-500"} xl:w-[44px] xl:h-[44px] w-[30px] h-[30px]`} fill="none">
                                 <path d="M2 18.5C3.76504 19.521 5.81428 20 8 20C14.4808 20 19.7617 14.8625 19.9922 8.43797L22 4.5L18.6458 5C17.9407 4.37764 17.0144 4 16 4C13.4276 4 11.5007 6.51734 12.1209 8.98003C8.56784 9.20927 5.34867 7.0213 3.48693 4.10523C2.25147 8.30185 3.39629 13.3561 6.5 16.4705C6.5 17.647 3.5 18.3488 2 18.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
@@ -76,7 +114,7 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
                     </div>
                 </div>
 
-                <div className="lg:flex hidden">
+                <div className="lg:flex hidden popup">
                     <img src={callme} alt="" />
                 </div>
             </div>
