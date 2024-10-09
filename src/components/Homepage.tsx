@@ -10,7 +10,7 @@ import Marquee from "react-fast-marquee"
 import { useEffect, useRef } from "react"
 import Desktop from "./Desktop"
 import Mobile from "./Mobile"
-const Homepage = ({isDarkMode, toggleDarkMode} : {isDarkMode: boolean, toggleDarkMode: ()=>void}) => {
+const Homepage = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDarkMode: () => void }) => {
 
     const curtainRef = useRef<HTMLDivElement | null>(null);
 
@@ -35,6 +35,7 @@ const Homepage = ({isDarkMode, toggleDarkMode} : {isDarkMode: boolean, toggleDar
     return (
         <div className={`${isDarkMode ? "bg-[#0f0f0f] text-white" : " bg-[#f7f9fc] text-black"} h-auto w-screen flex flex-col items-center justify-start px-4`}>
 
+            {/* Animation Div  */}
             <div
                 ref={curtainRef}
                 style={{
@@ -76,7 +77,7 @@ const Homepage = ({isDarkMode, toggleDarkMode} : {isDarkMode: boolean, toggleDar
                         </Link>
 
                         <div className="flex flex-col lg:w-1/2 md:w-[90%] w-full items-center justify-start lg:gap-4 gap-6 h-full">
-                            <div className={`relative popup group cursor-pointer overflow-hidden w-full lg:py-2 py-3 h-1/4 flex items-center justify-center rounded-full ${isDarkMode ? "bg-[#1a1a1a] bg-gradient-to-r shadow-none from-zinc-800 to-zinc-900 ": "bg-white shadow-lg "}  `}>
+                            <div className={`relative popup group cursor-default overflow-hidden w-full lg:py-2 py-3 h-1/4 flex items-center justify-center rounded-full ${isDarkMode ? "bg-[#1a1a1a] bg-gradient-to-r shadow-none from-zinc-800 to-zinc-900 " : "bg-white shadow-lg "}  `}>
                                 <Marquee speed={50} className="w-[90%]">
                                     <span className="text-zinc-500 uppercase text-[0.8rem]">Looking to <span className={`${isDarkMode ? "text-white" : "text-blue-500"}`}>collaborate?</span> Get in touch&nbsp;.&nbsp;</span>
                                     <span className="text-zinc-500 uppercase text-[0.8rem]">Check out my <span className={`${isDarkMode ? "text-white" : "text-blue-500"}`}>projects.</span>&nbsp;.&nbsp;</span>
@@ -87,8 +88,8 @@ const Homepage = ({isDarkMode, toggleDarkMode} : {isDarkMode: boolean, toggleDar
 
                             <div className="flex md:flex-row flex-col items-center justify-between gap-4 w-full popup">
                                 <div className="md:w-1/2 w-full relative group">
-                                    <Card isDarkMode={isDarkMode} title="Credentials" destination="/credentials" description="more about me" />
-                                    <Link to="/credentials">
+                                    <Card isDarkMode={isDarkMode} title="Credentials" destination="/about" description="more about me" />
+                                    <Link to="/about">
                                         <img src={sign} className={`${isDarkMode ? "flex" : "hidden"} absolute cursor-pointer top-[40%] left-[50%] opacity-75 group-hover:opacity-100 transition-all duration-500`} style={{ transform: "translate(-50%, -60%)" }} alt="" />
                                         <img src={signblack} className={`${isDarkMode ? "hidden" : "flex"} absolute cursor-pointer top-[40%] left-[50%] opacity-75 group-hover:opacity-100 transition-all duration-500`} style={{ transform: "translate(-50%, -60%)" }} alt="" />
                                     </Link>

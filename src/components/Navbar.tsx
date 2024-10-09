@@ -1,6 +1,7 @@
 import lightmode from '../assets/images/lightmode.png'
 import darkmode from '../assets/images/darkmode.png'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDarkMode: () => void }) => {
@@ -11,10 +12,11 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDar
             <div className="flex items-center justify-between md:flex-row flex-row-reverse w-[75rem]">
 
                 <ul className="md:flex hidden items-center justify-center gap-9">
-                    <li className={`${isDarkMode ? "text-white" : "text-blue-500"}`}><a href="#">Home</a></li>
-                    <li className="text-zinc-600 transition-all dark:hover:text-white hover:text-blue-500"><a href="#">About</a></li>
-                    <li className="text-zinc-600 transition-all dark:hover:text-white hover:text-blue-500"><a href="#">Works</a></li>
-                    <li className="text-zinc-600  transition-all dark:hover:text-white hover:text-blue-500"><a href="#">Contact</a></li>
+                    <li className={`text-zinc-600 transition-all ${isDarkMode ? "hover:text-white" : "hover:text-blue-500"} `}><Link to="/">Home</Link></li>
+
+                    <li className={`text-zinc-600 transition-all ${isDarkMode ? "hover:text-white" : "hover:text-blue-500"} `}><Link to="/about">About</Link></li>
+                    <li className={`text-zinc-600  transition-all ${isDarkMode ? "hover:text-white" : "hover:text-blue-500"} `}><Link to="/works">Works</Link></li>
+                    <li className={`text-zinc-600  transition-all ${isDarkMode ? "hover:text-white" : "hover:text-blue-500"} `}><Link to="/contact">Contact</Link></li>
                 </ul>
 
                 <div onClick={toggleDarkMode} className={`${isDarkMode ? "bg-zinc-800 hover:bg-zinc-900 " : "bg-zinc-200 hover:bg-zinc-300"} h-9 w-9 flex items-center justify-center rounded-lg cursor-pointer hover:scale-105 transition-all`}>
@@ -66,7 +68,7 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDar
                 </ul>
             </div>
 
-        </div>
+        </div >
     )
 }
 
