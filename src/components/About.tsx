@@ -33,6 +33,7 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
 
       {/* Animation Div  */}
       <div
+        className={`${isDarkMode ? "bg-[#131313]" : "bg-white"}`}
         ref={curtainRef}
         style={{
           position: 'fixed',
@@ -40,7 +41,6 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
           left: 0,
           width: '100%',
           height: '100%',
-          backgroundColor: '#131313',
           zIndex: 1000,
         }}
       ></div>
@@ -48,7 +48,7 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
 
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-      <div className="flex flex-col items-start justify-start gap-6 xl:w-[75rem] w-[90%] h-full pt-12 ">
+      <div className="flex flex-col items-start justify-start gap-6 xl:w-[75rem] w-[90%] h-full pt-[8rem]">
 
         <div className="flex items-center lg:flex-row flex-col justify-between gap-6 w-full lg:h-[22rem]">
 

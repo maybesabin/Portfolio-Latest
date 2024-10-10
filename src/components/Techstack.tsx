@@ -64,6 +64,7 @@ const Techstack = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggle
 
             {/* Animation Div  */}
             <div
+                className={`${isDarkMode ? "bg-[#131313]" : "bg-white"}`}
                 ref={curtainRef}
                 style={{
                     position: 'fixed',
@@ -71,14 +72,13 @@ const Techstack = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggle
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: '#131313',
                     zIndex: 1000,
                 }}
             ></div>
 
             <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-            <div className="flex flex-col items-start justify-start gap-12 xl:w-[75rem] w-[90%] h-full pt-12 ">
+            <div className="flex flex-col items-start justify-start gap-12 xl:w-[75rem] w-[90%] h-full pt-[8rem] ">
                 <div className="flex flex-col items-start gap-4 md:pb-6">
                     <h1 className={`font-semibold md:text-5xl text-3xl`}>Techstack & Tools</h1>
                     <p className="md:text-[1rem] text-xs text-zinc-400">Though the list is always changing. Here are the tools I use on day-to-day basis.</p>

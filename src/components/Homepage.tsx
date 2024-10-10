@@ -37,6 +37,7 @@ const Homepage = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleD
 
             {/* Animation Div  */}
             <div
+                className={`${isDarkMode ? "bg-[#131313]" : "bg-white"}`}
                 ref={curtainRef}
                 style={{
                     position: 'fixed',
@@ -44,7 +45,6 @@ const Homepage = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleD
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: '#131313',
                     zIndex: 1000,
                 }}
             ></div>
@@ -53,7 +53,7 @@ const Homepage = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleD
 
             <div className="flex flex-col items-center justify-between xl:w-[75rem] lg:w-[60rem] w-full h-full">
 
-                <section className="flex flex-col items-start justify-center gap-4 lg:pt-[7rem] pt-6 w-full h-full">
+                <section className="flex flex-col items-start justify-center gap-4 lg:pt-[7rem] pt-[8rem] w-full h-full">
 
                     <div className="flex lg:items-start items-center lg:flex-row flex-col justify-between w-full gap-4 xl:h-[22rem] h-full ">
 
@@ -78,7 +78,7 @@ const Homepage = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleD
 
                         <div className="flex flex-col lg:w-1/2 md:w-[90%] w-full items-center justify-start lg:gap-4 gap-6 h-full">
                             <div className={`relative popup group cursor-default overflow-hidden w-full lg:py-2 py-3 h-1/4 flex items-center justify-center rounded-full ${isDarkMode ? "bg-[#1a1a1a] bg-gradient-to-r shadow-none from-zinc-800 to-zinc-900 " : "bg-white shadow-lg "}  `}>
-                                <Marquee speed={50} className="w-[90%]">
+                                <Marquee speed={50} className="w-[85%]">
                                     <span className="text-zinc-500 uppercase text-[0.8rem]">Looking to <span className={`${isDarkMode ? "text-white" : "text-blue-500"}`}>collaborate?</span> Get in touch&nbsp;.&nbsp;</span>
                                     <span className="text-zinc-500 uppercase text-[0.8rem]">Check out my <span className={`${isDarkMode ? "text-white" : "text-blue-500"}`}>projects.</span>&nbsp;.&nbsp;</span>
                                     <span className="text-zinc-500 uppercase text-[0.8rem]">Looking to <span className={`${isDarkMode ? "text-white" : "text-blue-500"}`}>collaborate?</span> Get in touch&nbsp;.&nbsp;</span>

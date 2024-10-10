@@ -59,6 +59,7 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
 
             {/* Animation Div  */}
             <div
+                className={`${isDarkMode ? "bg-[#131313]" : "bg-white"}`}
                 ref={curtainRef}
                 style={{
                     position: 'fixed',
@@ -66,14 +67,13 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: '#131313',
                     zIndex: 1000,
                 }}
             ></div>
 
             <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-            <div className="flex items-start justify-between gap-12 xl:w-[75rem] w-[90%] h-full pt-12 ">
+            <div className="flex items-start justify-between gap-12 xl:w-[75rem] w-[90%] h-full pt-[8rem]">
                 <div className="flex flex-col items-start gap-9">
                     <h1 className="uppercase text-[1rem] font-semibold popup">contact info</h1>
                     {contactInfo.map((item, idx) => {
