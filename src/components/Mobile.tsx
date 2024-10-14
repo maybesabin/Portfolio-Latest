@@ -24,7 +24,7 @@ const Mobile = ({ isDarkMode }: { isDarkMode: boolean }) => {
             <div className="flex md:flex-row flex-col items-center justify-between gap-4 w-full">
                 <div className="md:w-1/2 w-full relative group popup">
                     <Card isDarkMode={isDarkMode} title="Tech Stack" destination="/techstack" description="what i use ?" />
-                    <Link to="/credentials"><img src={coding} className="w-[120px] absolute cursor-pointer top-[40%] left-[50%] opacity-75 group-hover:opacity-100 transition-all duration-500" style={{ transform: "translate(-50%, -60%)" }} alt="" />
+                    <Link to="/techstack"><img src={coding} className="w-[120px] absolute cursor-pointer top-[40%] left-[50%] opacity-75 group-hover:opacity-100 transition-all duration-500" style={{ transform: "translate(-50%, -60%)" }} alt="" />
                     </Link>
                 </div>
 

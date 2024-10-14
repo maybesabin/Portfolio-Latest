@@ -18,9 +18,9 @@ const Navbar = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDar
         }
     };
     return (
-        <div className={`xl:w-[75rem] w-full h-16 flex fixed items-center justify-center top-0 ${isDarkMode ? "bg-[#0f0f0f]" : "bg-[#f7f9fc]"}  z-[999]`}>
+        <div className={`xl:w-[75rem] w-full h-18 flex fixed items-center justify-center top-0 ${isDarkMode ? "bg-[#0f0f0f]" : "bg-[#f7f9fc]"}  z-[999]`}>
 
-            <div className={`flex items-center justify-center xl:w-[98%] w-[90%] ${isDarkMode ? "bg-[#0f0f0f]" : "bg-[#f7f9fc]"}`}>
+            <div className={`flex items-center justify-center xl:w-full h-full w-[90%] ${isDarkMode ? "bg-[#0f0f0f]" : "bg-[#f7f9fc]"}`}>
 
                 <div className='flex items-center mt-8 md:flex-row flex-row-reverse justify-between w-full mb-2'>
 
