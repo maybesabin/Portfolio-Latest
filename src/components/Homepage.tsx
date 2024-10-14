@@ -53,7 +53,7 @@ const Homepage = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleD
 
             <div className="flex flex-col items-center justify-between xl:w-[75rem] lg:w-[60rem] w-full h-full">
 
-                <section className="flex flex-col items-start justify-center gap-4 lg:pt-[7rem] pt-[8rem] w-full h-full">
+                <section className="flex flex-col items-start justify-center gap-4 md:pt-[12rem] pt-[8rem] w-full h-full">
 
                     <div className="flex lg:items-start items-center lg:flex-row flex-col justify-between w-full gap-4 xl:h-[22rem] h-full ">
 

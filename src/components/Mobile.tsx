@@ -1,4 +1,5 @@
 import sword from '../assets/images/sowrd.png'
+import swordlight from '../assets/images/swordLight.png'
 import { Link } from "react-router-dom"
 import coding from '../assets/images/coding.png'
 import Card from "../components/Card"
@@ -8,7 +9,7 @@ const Mobile = ({ isDarkMode }: { isDarkMode: boolean }) => {
         <div className="lg:hidden flex flex-col items-center justify-center gap-4 w-full md:px-9 h-auto pb-12">
 
             <div className={`w-full h-[18rem] ${isDarkMode ? "bg-[#131313] shadow-none " : "bg-white shadow-lg "} group cursor-pointer flex flex-col items-start justify-center gap-10 xl:text-5xl text-4xl font-semibold rounded-[2.5rem] px-6 relative popup`}>
-                <img src={sword} width={'50px'} alt="" />
+                <img src={isDarkMode ? sword : swordlight} width={'50px'} alt="" />
                 <Link to="/contact" className="flex items-center justify-between w-full">
                     <h1>Let's <br /> work <span className="text-[#585198]">together.</span></h1>
                     <svg className={`absolute lg:bottom-5 bottom-2 right-5 cursor-pointer opacity-50 stroke-zinc-500 group-hover:opacity-100 
@@ -31,7 +32,7 @@ const Mobile = ({ isDarkMode }: { isDarkMode: boolean }) => {
                 <div className="md:w-1/2 w-full h-full relative group popup">
                     <Card isDarkMode={isDarkMode} title="Profiles" destination="/contact" description="connect with me" />
 
-                    <div className={`absolute ${isDarkMode ? "bg-gradient-to-b from-[#212121] to-[#121212]" : "bg-gray-100"}  flex items-center justify-center gap-12 px-6 cursor-pointer top-[35%] left-[50%] w-[90%] xl:h-32 h-28 rounded-3xl group`} style={{ transform: "translate(-50%, -50%)" }}>
+                    <div className={`absolute ${isDarkMode ? "bg-gradient-to-b from-[#212121] to-[#121212]" : "bg-none"}  flex items-center justify-center gap-12 px-6 cursor-pointer top-[35%] left-[50%] w-[90%] xl:h-32 h-28 rounded-3xl group`} style={{ transform: "translate(-50%, -50%)" }}>
 
                         <div className={`${isDarkMode ? "bg-zinc-800" : " bg-white shadow-lg"} rounded-full xl:p-5 p-3 social-div`}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={`${isDarkMode ? "text-white" : "text-blue-500"} w-[44px] h-[44px]`} fill="none">

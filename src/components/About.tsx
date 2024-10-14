@@ -3,6 +3,7 @@ import wave from "../assets/images/wave.png"
 import star from "../assets/images/star.png"
 import bluestar from "../assets/images/star-blue.png"
 import sword from "../assets/images/sowrd.png"
+import swordlight from "../assets/images/swordLight.png"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
 
@@ -48,7 +49,7 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
 
       <Navbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
-      <div className="flex flex-col items-start justify-start gap-6 xl:w-[75rem] w-[90%] h-full pt-[8rem]">
+      <div className="flex flex-col items-start justify-start gap-6 xl:w-[75rem] w-[90%] h-full md:pt-[10rem] pt-[8rem]">
 
         <div className="flex items-center lg:flex-row flex-col justify-between gap-6 w-full lg:h-[22rem]">
 
@@ -62,7 +63,7 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
             </div>
 
             <div className={`${isDarkMode ? "bg-gradient-to-br from-[#212121] to-[#121212]" : "bg-white shadow-lg"} px-6 flex flex-col items-start gap-6 lg:h-full h-auto lg:pb-0 pb-6 rounded-3xl popup`}>
-              <img src={sword} width={'40px'} alt="" />
+              <img src={isDarkMode ? sword : swordlight} width={'40px'} alt="" />
               <div className="flex flex-col items-start gap-6">
                 <h1 className={`${isDarkMode ? "text-white" : "text-black"} md:text-5xl text-3xl font-semibold`}>Sabin Hamal</h1>
                 <p className="md:text-[1rem] text-xs text-gray-400 md:leading-5">A front-end developer based in Kathmandu, Nepal. I specialize in modern frameworks like React and TypeScript. I love bringing ideas to life through clean, efficient code, and I'm always eager to take on new challenges!</p>
@@ -83,7 +84,7 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
             </div>
             <div className="flex flex-col gap-3 items-start">
               <p className="text-zinc-400 lg:text-[1rem] text-xs">2022-2024</p>
-              <h1 className={`text-xl ${isDarkMode ? "text-white" : "text-blue-500"}`}>Front End Development</h1>
+              <h1 className={`lg:text-xl ${isDarkMode ? "text-white" : "text-blue-500"}`}>Front End Development</h1>
               <h3 className="text-zinc-400 lg:text-[1rem] text-xs">Self Learned</h3>
             </div>
           </div>
@@ -97,7 +98,7 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
             </div>
             <div className="flex flex-col gap-3 items-start">
               <p className="text-zinc-400 lg:text-[1rem] text-xs">2022-2024</p>
-              <h1 className={`text-xl ${isDarkMode ? "text-white" : "text-blue-500"}`}>SLC</h1>
+              <h1 className={`lg:text-xl ${isDarkMode ? "text-white" : "text-blue-500"}`}>SLC</h1>
               <h3 className="text-zinc-400 lg:text-[1rem] text-xs">Gurukul Academy</h3>
             </div>
           </div>
