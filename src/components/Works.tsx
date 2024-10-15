@@ -30,7 +30,7 @@ const Works = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
     { name: "School Website", sourceCode: "https://github.com/maybesabin/Apple-Academy", livePreview: "https://apple-academy-iota.vercel.app/" },
     { name: "Crypto Website", sourceCode: "https://github.com/maybesabin/Crypto-Website", livePreview: "https://crypto-website-sabin.vercel.app/" },
     { name: "Product Landing Page", sourceCode: "https://github.com/maybesabin/Product-Landing-Page", livePreview: "https://product-landing-page-sabin.vercel.app/" },
-    { name: "Old Portfolio", sourceCode: "https://github.com/maybesabin/Final-Portfolio", livePreview: "https://sabinhamal.com.np/" }
+    { name: "Old Portfolio", sourceCode: "https://github.com/maybesabin/Old-Portfolio", livePreview: "https://codersabin.netlify.app/" }
   ]
 
   return (
