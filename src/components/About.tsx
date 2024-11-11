@@ -6,7 +6,6 @@ import sword from "../assets/images/sowrd.png"
 import swordlight from "../assets/images/swordLight.png"
 import { useEffect, useRef } from "react"
 import gsap from "gsap"
-
 const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDarkMode: () => void }) => {
 
   const curtainRef = useRef<HTMLDivElement | null>(null);
@@ -106,6 +105,7 @@ const About = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
         </div>
 
       </div>
+
     </div >
   )
 }
