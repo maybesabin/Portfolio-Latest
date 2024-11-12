@@ -28,8 +28,9 @@ const Works = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
 
   const projects = [
     { name: "SaaS Website", sourceCode: "https://github.com/maybesabin/SwiftOps", livePreview: "https://swiftops.vercel.app/" },
-    { name: "School Website", sourceCode: "https://github.com/maybesabin/Apple-Academy", livePreview: "https://apple-academy-iota.vercel.app/" },
+    { name: "E-Commerce Website", sourceCode: "https://github.com/maybesabin/Trendora-Ecommerce", livePreview: "https://trendora-shop.vercel.app/" },
     { name: "Crypto Website", sourceCode: "https://github.com/maybesabin/Crypto-Website", livePreview: "https://crypto-website-sabin.vercel.app/" },
+    { name: "School Website", sourceCode: "https://github.com/maybesabin/Apple-Academy", livePreview: "https://apple-academy-iota.vercel.app/" },
     { name: "Product Landing Page", sourceCode: "https://github.com/maybesabin/Product-Landing-Page", livePreview: "https://product-landing-page-sabin.vercel.app/" },
     { name: "Old Portfolio", sourceCode: "https://github.com/maybesabin/Old-Portfolio", livePreview: "https://codersabin.netlify.app/" }
   ]
