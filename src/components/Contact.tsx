@@ -93,7 +93,7 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
 
         <div className={`${isDarkMode ? "bg-[#0f0f0f] text-white" : " bg-[#f7f9fc] text-black"} h-auto w-full overflow-hidden pb-12 flex flex-col items-center justify-start px-4`}>
 
-            <Toaster />
+            <div className="z-[1200]"><Toaster /></div>
             {/* Animation Div  */}
             <div
                 className={`${isDarkMode ? "bg-[#131313]" : "bg-white"}`}
