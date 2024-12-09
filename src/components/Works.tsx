@@ -27,6 +27,7 @@ const Works = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
   }, []);
 
   const projects = [
+    { name: "Sabin UI", sourceCode: "https://github.com/maybesabin/SabinUI", livePreview: "https://sabinui.vercel.app/" },
     { name: "SaaS Website", sourceCode: "https://github.com/maybesabin/SwiftOps", livePreview: "https://swiftops.vercel.app/" },
     { name: "E-Commerce Website", sourceCode: "https://github.com/maybesabin/Trendora-Ecommerce", livePreview: "https://trendora-shop.vercel.app/" },
     { name: "Crypto Website", sourceCode: "https://github.com/maybesabin/Crypto-Website", livePreview: "https://crypto-website-sabin.vercel.app/" },
@@ -66,7 +67,7 @@ const Works = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDark
           <p className="text-zinc-600 text-xs md:w-1/2 w-full md:text-left text-center">I love creating visually stunning & responsive websites using latest cutting edge technologies. Here are some of my projects that I've worked upon. 👇</p>
         </div>
 
-        <ul className="flex flex-col items-start gap-12">
+        <ul className="grid md:gap-24 gap-12 items-start grid-cols-1 md:grid-cols-2">
 
           {projects.map((item, idx) => {
             return (
