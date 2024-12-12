@@ -93,7 +93,7 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
 
         <div className={`${isDarkMode ? "bg-[#0f0f0f] text-white" : " bg-[#f7f9fc] text-black"} h-auto w-full overflow-hidden pb-12 flex flex-col items-center justify-start px-4`}>
 
-            <div className="z-[1200]"><Toaster /></div>
+            <div className="z-[1200] flex items-center justify-center w-full"><Toaster /></div>
             {/* Animation Div  */}
             <div
                 className={`${isDarkMode ? "bg-[#131313]" : "bg-white"}`}
@@ -159,9 +159,9 @@ const Contact = ({ isDarkMode, toggleDarkMode }: { isDarkMode: boolean, toggleDa
                     </div>
 
                     <form ref={form} onSubmit={sendEmail} className="flex flex-col items-start justify-center w-full gap-5">
-                        <input name="user_name" type="text" placeholder="Your Name *" className={`w-full h-14 rounded-xl p-4 text-xs  from-[#262626] to-[#161616] ${isDarkMode ? "bg-gradient-to-r" : "bg-[#f7f9fc]"} outline-none`} />
-                        <input type="email" name="user_email" placeholder="Your Email *" className={`w-full h-14 rounded-xl p-4 text-xs  from-[#262626] to-[#161616] ${isDarkMode ? "bg-gradient-to-r" : "bg-[#f7f9fc]"} outline-none`} />
-                        <textarea placeholder="Your Message *" name="message" className={`w-full h-32 rounded-xl p-4 text-xs  from-[#262626] to-[#161616] ${isDarkMode ? "bg-gradient-to-r" : "bg-[#f7f9fc]"} outline-none`} style={{ resize: "none" }}></textarea>
+                        <input required name="user_name" type="text" placeholder="Your Name *" className={`w-full h-14 rounded-xl p-4 text-xs  from-[#262626] to-[#161616] ${isDarkMode ? "bg-gradient-to-r" : "bg-[#f7f9fc]"} outline-none`} />
+                        <input required type="email" name="user_email" placeholder="Your Email *" className={`w-full h-14 rounded-xl p-4 text-xs  from-[#262626] to-[#161616] ${isDarkMode ? "bg-gradient-to-r" : "bg-[#f7f9fc]"} outline-none`} />
+                        <textarea required placeholder="Your Message *" name="message" className={`w-full h-32 rounded-xl p-4 text-xs  from-[#262626] to-[#161616] ${isDarkMode ? "bg-gradient-to-r" : "bg-[#f7f9fc]"} outline-none`} style={{ resize: "none" }}></textarea>
                         <button type="submit" value="Send" className={`w-full flex items-center justify-center h-14 text-white ${isDarkMode ? "hover:bg-white hover:text-black" : " hover:bg-blue-500"}  text-xs transition-all bg-zinc-800 rounded-xl duration-500`}>Send Message</button>
                     </form>
                 </div>
